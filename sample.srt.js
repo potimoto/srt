@@ -1,11 +1,11 @@
-0
+1
 
 00:00:00,000 --> 00:00:01,000
 
-loadScript('https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js', function(e){
+loadScript('//static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js', function(e){
     console.log("robot web tools loaded");
 });
-loadScript('https://static.robotwebtools.org/roslibjs/current/roslib.js', function(e){
+loadScript('//static.robotwebtools.org/roslibjs/current/roslib.js', function(e){
     console.log("roslib loaded");
 });
 
@@ -65,4 +65,3 @@ function pub(idx) {
 }
 
 pub(0);
-
