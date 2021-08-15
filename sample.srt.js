@@ -36,8 +36,9 @@ ros.on('close', function() {
     document.getElementById('closed').style.display = 'inline';
 });
 
-ros.connect('ws://192.168.10.122:9090');
-  
+//ros.connect('ws://192.168.10.122:9090');
+ros.conect('ws://000412d18d4c.ngrok.io');
+
 teleop = new ROSLIB.Topic({
     ros : ros,
     name : '/cmd_vel',
