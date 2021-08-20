@@ -1,6 +1,5 @@
 1
 00:00:00,000 --> 00:00:01,000
-alert("hello world");
 loadScript('https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js', function(e){
     console.log("robot web tools loaded");
 });
@@ -29,7 +28,8 @@ ros.on('close', function() {
     document.getElementById('closed').style.display = 'inline';
 });
 //ros.connect('ws://192.168.10.122:9090');
-ros.conect('ws://000412d18d4c.ngrok.io');
+ros.connect('ws://192.168.1.13:9090');
+//ros.conect('ws://000412d18d4c.ngrok.io');
 teleop = new ROSLIB.Topic({
     ros : ros,
     name : '/cmd_vel',
