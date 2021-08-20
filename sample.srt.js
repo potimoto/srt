@@ -32,7 +32,7 @@ ros.connect('ws://192.168.1.13:9090');
 //ros.conect('ws://000412d18d4c.ngrok.io');
 teleop = new ROSLIB.Topic({
     ros : ros,
-    name : '/cmd_vel',
+    name : '/turtle1/cmd_vel',
     messageType : 'geometry_msgs/Twist'
 });
 let idx;
