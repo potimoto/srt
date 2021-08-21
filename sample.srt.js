@@ -12,10 +12,10 @@ loadScript('https://static.robotwebtools.org/EventEmitter2/current/eventemitter2
         });
         ros.on('connection', function() {
             console.log('Connection made!');
-            document.getElementById('connecting').style.display = 'none';
-            document.getElementById('error').style.display = 'none';
-            document.getElementById('closed').style.display = 'none';
-            document.getElementById('connected').style.display = 'inline';
+//             document.getElementById('connecting').style.display = 'none';
+//             document.getElementById('error').style.display = 'none';
+//             document.getElementById('closed').style.display = 'none';
+//             document.getElementById('connected').style.display = 'inline';
         });
         ros.on('close', function() {
             console.log('Connection closed.');
