@@ -1,5 +1,6 @@
 1
 00:00:00,000 --> 00:00:01,000
+const startTime = performance.now();//計測開始
 loadScript('https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js', function(e){
     loadScript('https://static.robotwebtools.org/roslibjs/current/roslib.js', function(e){
         ros = new ROSLIB.Ros();
@@ -30,6 +31,11 @@ loadScript('https://static.robotwebtools.org/EventEmitter2/current/eventemitter2
             name : '/cmd_vel',
             messageType : 'geometry_msgs/Twist'
         });
+        callback = new ROSLIB.Topic([
+            ros : ros,
+            name : '/cmd_vel_callback',
+            messageType : 'geometry_msgs/Twist'
+        });
         let idx;
         az = [1, 0, -1, 1, 0, -1, -1, 0, 1];
         lx = [1, 1, 1, 0, 0, 0, -1, -1, -1];
@@ -51,6 +57,11 @@ loadScript('https://static.robotwebtools.org/EventEmitter2/current/eventemitter2
             console.log(msg);
         }
         pub(0);
+        callback.subscribe(function(message) {
+            console.log('Received Callback ${message}');
+            const endTime = performance.now();
+            console.log(endTime - startTime);
+        });
         pub(4);
             console.log("roslib loaded");
         });
