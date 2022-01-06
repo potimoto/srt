@@ -5,9 +5,8 @@ function controller(){
     return turtle;
 }
 2
-00:00:03,000 --> 00:00:04,000
+00:00:05,000 --> 00:00:04,000
 function controller(){
-    let turtleX = 0.0;
-    let turtleZ = 0.0;
-    return turtleX, turtleZ;
+    const turtle = [0.0, 0.0];
+    return turtle;
 }
