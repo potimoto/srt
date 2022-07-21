@@ -92,3 +92,8 @@ controller(turtle);
 00:07:29,101 --> 00:07:30,800
 const turtle = [0.00,1.00];
 controller(turtle);
+
+18
+00:07:30,801 --> 00:07:31,999
+const turtle = [0.00,0.00];
+controller(turtle);
