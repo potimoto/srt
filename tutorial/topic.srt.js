@@ -1,6 +1,6 @@
 1
 00:04:12,000 --> 00:04:23,500
-const turtle = [0.01,0.00];
+const turtle = [0.03,0.00];
 controller(turtle);
 
 2
